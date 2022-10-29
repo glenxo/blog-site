@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.tdp-arch.com	TRUE	/	FALSE	1999999999	CRAFT_CSRF_TOKEN	d6f248ce37a4a04f75d006bfd0063dead49ff22b8ce42fcac3e3a4b7d42d9ff6a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22CRAFT_CSRF_TOKEN%22%3Bi%3A1%3Bs%3A40%3A%22QdBuAT5zTTeX05xbFy3r6nH_GwcmFQnBimnnQp51%22%3B%7D
+www.tdp-arch.com	TRUE	/	FALSE	1999999999	CraftSessionId	3548f4bbb358c1a9244bc8b6dd12852a
+developers.google.com	TRUE	/	FALSE	1999999999	_ga_devsite	GA1.3.1441378542.1667083380
+
