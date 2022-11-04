@@ -1,39 +1,26 @@
-const burger = document.querySelector("nav svg");
+let menu = document.querySelector('#menu-bars');
+let navbar = document.querySelector('.navbar');
 
-burger.addEventListener("click", () => {
-  if (burger.classList.contains("active")) {
-    gsap.to(".links", { x: "100%" });
-    gsap.to(".line", { stroke: "white" });
-    gsap.set("body", { overflow: "auto" });
-    gsap.set("body", { overflowX: "hidden" });
-  } else {
-    gsap.to(".links", { x: "0%" });
-    gsap.to(".line", { stroke: "black" });
-    gsap.fromTo(
-      ".links a",
-      { opacity: 0, y: 0 },
-      { opacity: 1, y: 20, delay: 0.25, stagger: 0.25 }
-    );
-    gsap.set("body", { overflow: "hidden" });
-  }
-  burger.classList.toggle("active");
-});
+menu.onclick = () =>{
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
+  searchIcon.classList.remove('fa-times');
+  searchForm.classList.remove('active');
+}
 
-const videos = gsap.utils.toArray(".video");
-gsap.set(videos, { opacity: 0 });
+let searchIcon = document.querySelector('#search-icon');
+let searchForm = document.querySelector('.search-form');
 
-videos.forEach((video) => {
-  ScrollTrigger.create({
-    trigger: video,
-    start: "top center",
-    end: "bottom center",
+searchIcon.onclick = () =>{
+  searchIcon.classList.toggle('fa-times');
+  searchForm.classList.toggle('active');
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+}
 
-    onEnter: () => {
-      gsap.to(video, { opacity: 1 });
-      video.play();
-    },
-    onEnterBack: () => video.play(),
-    onLeave: () => video.pause(),
-    onLeaveBack: () => video.pause(),
-  });
-});
+window.onscroll = () =>{
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+  searchIcon.classList.remove('fa-times');
+  searchForm.classList.remove('active');
+}
