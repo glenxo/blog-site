@@ -137,7 +137,7 @@ section{
 
 .banner{
   min-height: 80vh;
-  background:url(../images/banner.png) no-repeat;
+  background:url(/assets/pexels-jessica-lewis-creative-593322.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   display: grid;
@@ -167,11 +167,13 @@ section{
   line-height: 1.5;
 }
 
+
 .container{
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   gap:1.5rem;
-  background:#eee;
+  background:rgb(212, 153, 153);
+  background-image: url();
 }
 
 .container .posts-container .post{
